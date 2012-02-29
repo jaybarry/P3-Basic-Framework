@@ -6,6 +6,7 @@ audio:not([controls]) { display: none; }
 [hidden] { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
 html, button, input, select, textarea { font-family: sans-serif; color: #222; }
 body { margin: 0; font-size: 1em; line-height: 1.4; }
 
@@ -67,8 +68,17 @@ img, object { max-width: 100%; }
 	box-sizing: border-box;
 }
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
+.no-boxsizing * {
+	behavior: url(scripts/boxsizing.htc);
+}
+
+a { 
+	color: blue; 
+	font-weight: 700;
+	text-decoration: none;
+}
+
+a:visited { color: red; }
+a:hover { color: red; }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
